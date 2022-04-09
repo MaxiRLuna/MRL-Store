@@ -59,8 +59,8 @@ body{
 .category{
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    margin: 20px;
+    padding: 18px;
+    margin: 18px;
     align-items: center;
     gap: 5px;
     font-size: 1.5rem;
@@ -69,8 +69,8 @@ body{
 
 .category img {
     display: flex;
-    width: 230px;
-    height: 230px;
+    width: 100%;
+    height: 100%;
     margin-top: 5rem;
     margin-bottom: 5rem;
 
@@ -125,6 +125,7 @@ footer ul li a{
 /* ++++++++++++++ */
 /* Sobre Nosotros */
 /* ++++++++++++++ */
+
 .lorem{
     display: flex;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -178,6 +179,40 @@ footer ul li a{
 /* ++++++ */
 
 .sumate{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30px 500px;
+    grid-template-areas: 
+    "p"
+    "iframe"
+    ;
+    justify-content: center;
+}
+.sumate p{
+    grid-area: p;
+    margin-left: 25%;
+}
+.sumate iframe{
+    grid-area: iframe;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    margin-left: 25%;
+   /*  min-width: 500px; */
+}
+
+@media screen and (max-width: 600px){
+    .sumate{grid-template-rows: 30px 250px;
+    }
+    .sumate p{
+        font-size: 0.7rem;
+    }
+    
+}
+
+
+
+/* .sumate{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -187,7 +222,7 @@ footer ul li a{
     margin-bottom: 20px;
     gap: 50px;
     font-size: 2rem;
-}
+} */
 
 .volverSum{
     display: flex;
@@ -197,4 +232,50 @@ footer ul li a{
     margin-left: 25%;
     margin-bottom: 20px;
     text-decoration: none;
+}
+
+/* +++++++++++++ */
+/* MEDIA QUERIES */
+/* +++++++++++++ */
+
+
+@media screen and (max-width: 350px){
+    .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 905px){
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas:
+        "c1 c2" 
+        "c3 c4"
+        "c5 c6"
+        ;
+    }
+    .c1{
+        grid-area: c1;
+    }
+    .c2{
+        grid-area: c2;
+    }
+    .c3{
+        grid-area: c3;
+    }
+    .c4{
+        grid-area: c4;
+    }
+    .c5{
+        grid-area: c5;
+    }
+    .c6{
+        grid-area: c6;
+    }
+    
 }
