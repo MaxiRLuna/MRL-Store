@@ -248,7 +248,7 @@ footer ul li a{
 
 }
 
-@media screen and (max-width: 905px){
+@media screen and (max-width: 9050px){
     .categories {
         display: grid;
         grid-template-columns: repeat(2 1fr);
